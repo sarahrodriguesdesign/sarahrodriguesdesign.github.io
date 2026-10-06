@@ -116,7 +116,20 @@ section.block{padding-block:clamp(48px,7vw,96px)}
 .xp-row h3{font-size:1.2rem}
 .xp-row h3 small{font:400 var(--s-small) var(--f-body); color:var(--muted); letter-spacing:0; margin-left:8px}
 .xp-row p{margin:6px 0 0; color:var(--muted); max-width:70ch; font-size:.98rem}
+.xp-row ul{margin:10px 0 0; padding-left:1.1em; display:grid; gap:4px; color:var(--muted); font-size:.95rem; max-width:70ch}
+.xp-row ul.tight{margin:0; color:var(--ink)}
+.xp-row ul.tight b{font-weight:600}
+.xp-row li::marker{color:var(--select)}
 @media (max-width:600px){.xp-row{grid-template-columns:minmax(0,1fr)}}
+.duo{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:clamp(28px,5vw,64px)}
+@media (max-width:820px){.duo{grid-template-columns:minmax(0,1fr)}}
+.duo .xp-row{grid-template-columns:100px minmax(0,1fr)}
+.tools{margin:0; display:grid; gap:0}
+.tools div{padding-block:18px; border-bottom:1px solid var(--line)}
+.tools div:first-child{border-top:1px solid var(--line)}
+.tools dt{color:var(--muted); margin-bottom:10px}
+.tools dd{margin:0; display:flex; flex-wrap:wrap; gap:8px}
+.tools dd span{background:var(--surface); border:1px solid var(--line); border-radius:4px; padding:4px 10px; font-size:var(--s-small)}
 
 /* Contato */
 .contact{background:var(--ink); color:var(--canvas); margin-top:clamp(40px,6vw,80px)}
@@ -237,14 +250,14 @@ dialog .close{position:sticky; top:0; display:flex; justify-content:flex-end; pa
     </div>
     <div class="c-grid">
       <div><span class="mono">Telefone</span><span style="user-select:all">(51) 99913-1736</span></div>
-      <div><span class="mono">Local</span>Canoas, RS</div>
+      <div><span class="mono">Local</span>Canoas e Porto Alegre, RS</div>
       <div><span class="mono">Redes</span>
         <a href="https://www.linkedin.com/in/sarahrodriguesmorais/" target="_blank" rel="noopener">LinkedIn ↗</a>
         <a href="https://www.behance.net/sarahrodrigues1996" target="_blank" rel="noopener">Behance ↗</a>
         <a href="https://medium.com/@sarahrmorais6" target="_blank" rel="noopener">Medium ↗</a>
       </div>
       <div><span class="mono">Documentos</span>
-        <a href="https://drive.google.com/file/d/1FskWz5l9dMn5nFQmIP8wo_4-dmtap5_r/view?usp=drive_link" target="_blank" rel="noopener">Currículo ↗</a>
+        <a href="curriculo-sara-rodrigues.pdf" target="_blank" rel="noopener">Currículo ↗</a>
       </div>
     </div>
     <p class="c-foot mono">© 2026 Sarah Rodrigues · Product Designer</p>
@@ -260,8 +273,8 @@ dialog .close{position:sticky; top:0; display:flex; justify-content:flex-end; pa
 const P = [
 { id:'john-deere', name:'Campus John Deere', year:'2025', cover:'hzZeERd8lIhX7a6TSWnCFJosuRs.png', size:'1440 × 900',
   title:'Unificando online e presencial: o fluxo híbrido do Campus John Deere',
-  card:'Product Designer · Samba Tech para John Deere',
-  meta:[['Ano','2025'],['Papel','Product Designer'],['Contexto','Samba Tech, alocada na John Deere'],['Entregas','Fluxos, protótipos navegáveis e dashboard']],
+  card:'Product Designer Pleno · Samba Tech para John Deere',
+  meta:[['Ano','2025'],['Papel','Product Designer Pleno'],['Contexto','Samba Tech, alocada na John Deere'],['Entregas','Fluxos, protótipos navegáveis e dashboard']],
   body:[
   ['h','Contexto'],
   ['p','Atuei como UX Designer na Samba Tech, alocada dentro da John Deere, trabalhando diretamente com a equipe responsável pelo Campus John Deere, o centro oficial de educação da empresa. O campus oferece treinamentos técnicos para quem opera, mantém ou instrui sobre o uso das máquinas e tecnologias da empresa.'],
@@ -316,8 +329,8 @@ const P = [
 
 { id:'rotik', name:'Rotik', year:'2022–2025', cover:'68Im7MZg1axZkVzKKJjUyEDc.png', size:'1440 × 1024',
   title:'Rotik, transformando a comunicação entre empresas e clientes',
-  card:'Product Designer · Huggy → Rotik (GoPWR)',
-  meta:[['Período','2022–2025'],['Papel','UX/UI Designer de ponta a ponta'],['Contexto','Huggy, depois Rotik (grupo GoPWR)'],['Entregas','Pesquisa, arquitetura e interface do zero']],
+  card:'Product Designer Pleno · Huggy → Rotik (GoPWR)',
+  meta:[['Período','2022–2025'],['Papel','Product Designer Pleno, de ponta a ponta'],['Contexto','Huggy, depois Rotik (grupo GoPWR)'],['Entregas','Pesquisa, arquitetura e interface do zero']],
   body:[
   ['h','Sobre'],
   ['p','O Rotik é um produto que nasceu em 2022 dentro da empresa Huggy, com o nome de Automator (MVP). No final de 2023, após algumas decisões internas, o produto passou a se chamar Rotik e atualmente faz parte do grupo de empresas GoPWR, tornando-se uma startup em crescimento.'],
@@ -392,8 +405,8 @@ const P = [
 
 { id:'mycapital', name:'MyCapital', year:'2021', cover:'BoA418zrMg5HWyTVu0cqA9X39w.png', size:'1440 × 960',
   title:'MyCapital, descobrindo o usuário através do processo de discovery',
-  card:'UX/UI Designer · Fintech · Discovery',
-  meta:[['Ano','2021'],['Papel','UX/UI Designer'],['Contexto','Fintech MyCapital'],['Foco','Discovery e pesquisa com usuários']],
+  card:'Product Designer Jr · Fintech · Discovery',
+  meta:[['Ano','2021'],['Papel','Product Designer Jr'],['Contexto','Fintech MyCapital (RJ)'],['Foco','Discovery e pesquisa com usuários']],
   body:[
   ['h','Meu papel'],
   ['p','Atuei no time de design de produto, em colaboração com a liderança e a engenharia, na realização de pesquisas, entrevistas com usuários, testes de usabilidade, criação de componentes visuais e apoio nas demandas do dia a dia para todos os times da empresa.'],
@@ -536,11 +549,11 @@ function home(){
   return `
   <section class="hero">
     <div class="wrap">
-      <div class="eyebrow mono"><b>Sarah Rodrigues</b><span>UX/UI · Product Design</span><span>Canoas, RS</span></div>
+      <div class="eyebrow mono"><b>Sarah Rodrigues</b><span>Product Designer · UI/UX · Publicitária</span><span>Canoas · Porto Alegre, RS</span></div>
       <h1>Designer de Produto e Publicitária, com foco no desenvolvimento de <span class="sel">interfaces<i></i><i></i><i></i><i></i></span> para soluções digitais e inovação <span class="end">tecnológica.<span class="cursor" aria-hidden="true"><svg viewBox="0 0 18 18"><path d="M2 1.5 15.5 7l-6 1.8L7 15z" fill="var(--cursor)" stroke="#fff" stroke-width="1.2" stroke-linejoin="round"/></svg><span>Sarah</span></span></span></h1>
       <div class="hero-links">
         <a class="btn primary" href="#projetos">Ver projetos</a>
-        <a class="btn" href="https://drive.google.com/file/d/1FskWz5l9dMn5nFQmIP8wo_4-dmtap5_r/view?usp=drive_link" target="_blank" rel="noopener">Currículo ↗</a>
+        <a class="btn" href="curriculo-sara-rodrigues.pdf" target="_blank" rel="noopener">Currículo ↗</a>
         <a class="btn" href="https://www.linkedin.com/in/sarahrodriguesmorais/" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </div>
@@ -570,9 +583,11 @@ function about(){
       <div>
         <p class="mono" style="color:var(--muted);margin:0 0 14px">Sobre mim</p>
         <h1>Do design gráfico ao design de produto.</h1>
-        <p class="lead">Tenho 28 anos, moro em Porto Alegre e sou formada em Publicidade e Propaganda.</p>
-        <p>Comecei minha carreira como designer gráfica e tive a oportunidade de trabalhar em equipes criativas de diversas empresas e agências de comunicação.</p>
-        <p>Em 2021, dei um passo adiante ao me tornar UX/UI Designer na fintech MyCapital, onde aprimorei minhas habilidades na área. Desde então, atuei de ponta a ponta na criação de produtos como a Rotik e no fluxo híbrido do Campus John Deere.</p>
+        <p class="lead">Atuo em design desde 2018, com experiência em UX e Product Design em fintechs e startups.</p>
+        <p>Sou formada em Publicidade e Propaganda e comecei a carreira como designer gráfica, em equipes criativas de empresas e agências de comunicação.</p>
+        <p>Fui Product Designer na MyCapital (RJ) e depois migrei para a Huggy (GoPWR), contribuindo para a evolução do Automator, que em 2023 se tornou a Rotik, uma startup em crescimento. Em 2025, integrei a Samba Tech, atuando no projeto de cursos híbridos do Campus John Deere.</p>
+        <p>Tenho experiência em colaboração estratégica com PMs e desenvolvedores, criação de protótipos de baixa e alta fidelidade, além de condução de pesquisas e testes de usabilidade.</p>
+        <div class="hero-links" style="margin-top:28px"><a class="btn primary" href="curriculo-sara-rodrigues.pdf" target="_blank" rel="noopener">Baixar currículo (PDF)</a></div>
       </div>
       <div class="portrait">
         <div class="frame-label mono"><span>sarah.jpg</span><span>4:5</span></div>
@@ -580,12 +595,47 @@ function about(){
       </div>
     </section>
     <section class="block" style="padding-top:24px">
-      <div class="sec-head"><h2>Experiências</h2><span class="mono">2020 → 2025</span></div>
+      <div class="sec-head"><h2>Experiência</h2><span class="mono">2020 → 2025</span></div>
       <div class="xp">
-        <div class="xp-row"><span class="mono">2025</span><div><h3>Samba Tech <small>para John Deere</small></h3><p>UX Designer alocada no time do Campus John Deere. Desenhei o fluxo completo dos cursos híbridos para alunos, instrutores e administradores, com pesquisa de campo no centro de treinamento em Campinas (SP).</p></div></div>
-        <div class="xp-row"><span class="mono">2022–2025</span><div><h3>Huggy → Rotik</h3><p>UX e UI Designer de ponta a ponta no time Automotion: fluxos, wireframes de baixa a alta fidelidade, pesquisas e testes de usabilidade. Responsável por levantar discussões e decisões com o PM sobre experiência e todo o design visual do Automator, que deixou de ser um produto para virar uma empresa, a Rotik.</p></div></div>
-        <div class="xp-row"><span class="mono">2021</span><div><h3>MyCapital</h3><p>Time de design, em colaboração com a liderança e a engenharia: pesquisas, entrevistas com usuários, testes de usabilidade, criação de componentes visuais e apoio às demandas de todos os times.</p></div></div>
+        <div class="xp-row"><span class="mono">2025</span><div><h3>John Deere <small>Product Designer Pleno · via Samba Tech</small></h3><p>Uma das maiores fabricantes globais de máquinas agrícolas e soluções digitais para o agronegócio.</p><ul>
+          <li>Responsável pelo desenvolvimento completo do projeto de cursos híbridos do Campus John Deere</li>
+          <li>Condução dos rituais com os integrantes do time</li>
+          <li>Colaboração direta com PM, desenvolvedores e cliente para definição de soluções e funcionalidades</li>
+          <li>Manutenção e documentação da biblioteca de design (estilos, componentes e templates)</li></ul></div></div>
+        <div class="xp-row"><span class="mono">2021–2025</span><div><h3>Automator e Rotik <small>Product Designer Pleno</small></h3><p>Startup de comunicação em massa, marketing e cobrança, parte do grupo GoPWR.</p><ul>
+          <li>Atuação de ponta a ponta no Automator/Rotik, do fluxo de usuário ao design visual completo</li>
+          <li>Criação e documentação da biblioteca de design (estilos e componentes)</li>
+          <li>Colaboração estratégica com PMs em decisões de experiência e produto</li>
+          <li>Responsável por todo o processo de design, conduzindo workshops, apresentações e entregas estratégicas da área</li></ul></div></div>
+        <div class="xp-row"><span class="mono">2021</span><div><h3>MyCapital <small>Product Designer Jr</small></h3><p>Fintech brasileira voltada para investimentos e soluções financeiras digitais.</p><ul>
+          <li>Colaboração direta com a liderança e o time de engenharia no desenvolvimento de soluções digitais</li>
+          <li>Manutenção e documentação da biblioteca de design (estilos, componentes e templates)</li>
+          <li>Condução de metodologias de discovery e research</li>
+          <li>Participação ativa no processo de discovery do produto B2C, gerando insights estratégicos para o backlog</li></ul></div></div>
         <div class="xp-row"><span class="mono">2020</span><div><h3>Agência S3</h3><p>Projetos de UI/UX, desdobramento de campanhas e materiais para redes sociais, identidade visual e papelaria corporativa, além de design gráfico como flyers, folders e catálogos.</p></div></div>
+      </div>
+    </section>
+    <section class="block" style="padding-top:0">
+      <div class="duo">
+        <div>
+          <div class="sec-head"><h2>Formação e certificados</h2></div>
+          <div class="xp">
+            <div class="xp-row"><span class="mono">2016–2024</span><div><h3>Publicidade e Propaganda</h3><p>Graduação · UniRitter</p></div></div>
+            <div class="xp-row"><span class="mono">Cursos</span><div><ul class="tight">
+              <li><b>UX/UI Design</b> · Design Circuit</li>
+              <li><b>UX/UI Design</b> · UX Unicórnio</li>
+              <li><b>Product Designer</b> · Josias Oliveira</li>
+              <li><b>Certificação PM3</b></li></ul></div></div>
+          </div>
+        </div>
+        <div>
+          <div class="sec-head"><h2>Ferramentas</h2></div>
+          <dl class="tools">
+            <div><dt class="mono">Design e prototipagem</dt><dd><span>Figma</span><span>Photoshop</span><span>Illustrator</span><span>Framer</span></dd></div>
+            <div><dt class="mono">Colaboração e gestão</dt><dd><span>Miro</span><span>Notion</span><span>Jira</span><span>Azure</span></dd></div>
+            <div><dt class="mono">Pesquisa e usabilidade</dt><dd><span>Hotjar</span><span>Maze</span><span>FullStory</span></dd></div>
+          </dl>
+        </div>
       </div>
     </section>
   </div>`;
